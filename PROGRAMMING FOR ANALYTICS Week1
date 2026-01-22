@@ -1,0 +1,120 @@
+# -----------------------------------------
+# 1. The Greeter
+# -----------------------------------------
+name = input("Enter your name: ")
+print("Hello,", name)
+
+
+# -----------------------------------------
+# 2. What's My Age Again?
+# -----------------------------------------
+year_of_birth = int(input("Enter your year of birth: "))
+current_year = 2026
+age = current_year - year_of_birth
+print("Your age is", age)
+
+
+# -----------------------------------------
+# 3. Ratio
+# -----------------------------------------
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if num2 != 0:
+    print("Ratio =", num1 / num2)
+else:
+    print("Cannot divide by zero.")
+
+
+# -----------------------------------------
+# 4. Sum and Mean
+# -----------------------------------------
+numbers = []
+for i in range(5):
+    n = float(input(f"Enter number {i+1}: "))
+    numbers.append(n)
+
+total = sum(numbers)
+mean = total / 5
+
+print("Sum =", total)
+print("Mean =", mean)
+
+
+# -----------------------------------------
+# 5. Swap
+# -----------------------------------------
+input1 = input("Enter first value: ")
+input2 = input("Enter second value: ")
+
+print("Before swap:", input1, input2)
+
+input1, input2 = input2, input1
+
+print("After swap:", input1, input2)
+
+
+# -----------------------------------------
+# 6. Multiply a String by a Number
+# -----------------------------------------
+text = "Hello"
+result = text * 3
+print(result)
+
+
+# -----------------------------------------
+# 7. Conversion Functions
+# -----------------------------------------
+
+# Kilometers ↔ Miles
+def km_to_miles(km):
+    return km * 0.621371
+
+def miles_to_km(miles):
+    return miles / 0.621371
+
+# Centigrade ↔ Fahrenheit
+def c_to_f(c):
+    return (c * 9/5) + 32
+
+def f_to_c(f):
+    return (f - 32) * 5/9
+
+
+# -----------------------------------------
+# 8. Palindrome Checker
+# -----------------------------------------
+def is_palindrome(text):
+    text = text.lower().replace(" ", "")
+    return text == text[::-1]
+
+word = input("Enter a word: ")
+print("Palindrome:", is_palindrome(word))
+
+
+# -----------------------------------------
+# 9. Even or Odd
+# -----------------------------------------
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+
+# -----------------------------------------
+# 10. Student Mark Classification
+# -----------------------------------------
+mark = int(input("Enter the mark: "))
+
+if 8 <= mark <= 10:
+    print("A")
+elif 5 <= mark <= 7:
+    print("B")
+elif 4 <= mark <= 6:
+    print("C")
+elif 1 <= mark <= 3:
+    print("F")
+else:
+    print("Wrong input")
