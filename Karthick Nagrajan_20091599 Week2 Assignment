@@ -1,1 +1,86 @@
+# The numbers are equal
 
+num1 = int(input("Enter the first integer: "))
+num2 = int(input("Enter the second integer: "))
+
+if num1 < num2:
+    print("First number is less than the second")
+elif num2 < num1:
+    print("Second number is less than the first")
+else:
+    print("The numbers are equal")
+    
+    
+ # You cannot vote
+
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are eligible to vote")
+else:
+    print("You cannot vote")   
+    
+# client's age and test whether they are eligible to go on vacation with the company or not.
+
+age = int(input("Enter your age: "))
+
+if 18 <= age <= 30:
+    print("You are eligible to go on vacation with the company")
+else:
+    print("You are NOT eligible to go on vacation with the company")
+    
+# a salary from the user and determine how much tax someone should pay according
+
+salary = float(input("Enter your salary: "))
+
+if salary <= 10000:
+    tax = 0
+elif salary <= 50000:
+    tax = (salary - 10000) * 0.20
+else:
+    tax = (40000 * 0.20) + ((salary - 50000) * 0.40)
+
+print("Tax to be paid: €", tax)
+
+# prompts the user for either 1, 2, 3 or 4.
+
+choice = int(input("Enter a number (1-4): "))
+
+if choice == 1:
+    print("diamonds")
+elif choice == 2:
+    print("hearts")
+elif choice == 3:
+    print("clubs")
+elif choice == 4:
+    print("spades")
+else:
+    print("Invalid choice")
+    
+    
+# SimpleCacl
+
+print("Welcome to the SimpleCalc")
+print("Press 1 to add two numbers")
+print("Press 2 to subtract two numbers")
+print("Press 3 to divide two numbers")
+print("Press 4 to multiply two numbers")
+
+selection = int(input("Enter your choice: "))
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if selection == 1:
+    print("Result:", num1 + num2)
+elif selection == 2:
+    print("Result:", num1 - num2)
+elif selection == 3:
+    if num2 != 0:
+        print("Result:", num1 / num2)
+    else:
+        print("Cannot divide by zero")
+elif selection == 4:
+    print("Result:", num1 * num2)
+else:
+    print("Invalid selection")
